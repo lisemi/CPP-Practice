@@ -31,13 +31,13 @@ void QuickSort(vector<int>& v, int low, int high) {
 		while (first < last && v[last] >= key)
 			last--;
 		if (first < last)
-			v[first++] = v[last];   // 首先会把v[lase]赋给v[first]，然后first再自加，因为++游标量后面。将比key小的移到原来拿key对应下标的位置（即v[first]），然后再右移左游标
+			v[first++] = v[last];   // 首先会把v[last]赋给v[first]，然后first再自加，因为++游标量后面。将比key小的移到原来拿key对应下标的位置（即v[first]），然后再右移左游标
 
 		// 将比第一个大的移到后面
 		while (first < last && v[first] <= key)
 			first++;
 		if (first < last)
-			v[last--] = v[first];
+			v[last--] = v[first];   // 到此完成一轮小左大右交换
 	}
 	// 基准置位，基准下标位置为key所在的位置，每次递归进来这个下标都会变
 	v[first] = key;
