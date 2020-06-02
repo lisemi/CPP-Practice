@@ -40,8 +40,8 @@ void QuickSort(vector<int>& v, int low, int high) {
 			v[last--] = v[first];   // 到此完成一轮小左大右交换
 	}
 	// 基准置位，基准下标位置为key所在的位置，每次递归进来这个下标都会变
-	v[first] = key;
-	// 前半递归
+	v[first] = key;   // 游标位置填充key值
+	// 前半递归，比key小的都在左边，比key大的都在右边，因此不再需要对key进行排序
 	QuickSort(v, low, first - 1);
 	// 后半递归
 	QuickSort(v, first + 1, high);

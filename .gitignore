@@ -6,7 +6,10 @@ Release
 release
 X64
 x64
+.vs
 
+CPP-Practice.VC*
+CPP-Practice.sln
 *.vcxproj
 *.filters
 .*.swp
